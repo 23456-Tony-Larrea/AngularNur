@@ -1,0 +1,42 @@
+<form (ngSubmit)="updateUsers()">
+    <div class="form-group">
+      <label for="name">name</label>
+      <input type="text" name="name" class="form-control" [(ngModel)]="userss.name">
+    </div>
+    <div class="form-group">
+      <label for="last_name">last name</label>
+      <input type="text" name="last_name" class="form-control" [(ngModel)]="userss.last_name">
+    </div>
+    
+    <div class="form-group">
+      <label for="identification">Identification</label>
+      <input type="text" name="identification" class="form-control" [(ngModel)]="userss.identification">
+    </div>
+    
+    <div class="form-group">
+      <label for="email">email</label>
+      <input type="text" name="email" class="form-control" [(ngModel)]="userss.email">
+    </div>
+    
+    <div class="form-group">
+      <label for="number">number</label>
+      <input type="text" name="last_name" class="form-control" [(ngModel)]="userss.number">
+    </div>
+    
+    <div class="form-group">
+      <label for="numberHouse">numberHouse</label>
+      <input type="text" name="numberHouse" class="form-control"[(ngModel)]="userss.numberHouse">
+    </div>
+    
+    <div class="form-group">
+      <label for="longitude">longitude</label>
+      <input type="text" name="longitude" class="form-control"[(ngModel)]="userss.longitude">
+    </div>
+    
+    <div class="form-group">
+      <label for="latitude">latitude</label>
+      <input type="text" name="latitude" class="form-control" [(ngModel)]="userss.latitude">
+    </div>
+    <button class="btn btn-dark btn-sm mt-4">Registrar</button>
+  </form>
+  
