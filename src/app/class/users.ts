@@ -1,5 +1,5 @@
 export class Users {
-    name:any;
+name:any;
 last_name:any;
 identification:any;
 email:any;

@@ -11,7 +11,7 @@ import { UsersEditComponent } from './components/users-edit/users-edit.component
 const routes: Routes = [
   { path: 'api', component:UsersComponent },
   
-  { path:'edit/id',component:UsersEditComponent}
+  { path:'api/edit/:id',component:UsersEditComponent}
 ];
 @NgModule({
   declarations: [

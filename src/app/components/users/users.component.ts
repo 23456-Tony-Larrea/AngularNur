@@ -25,11 +25,12 @@ insertData(){
   }) 
 }
 
-deleteData(id: string){
-  this.dataService.deleteData(id) .subscribe(res=>{
-      /* this.getUserData();
-  this.users=res*/
-  console.log(JSON.stringify(res))    
+deleteData(id:string){
+  this.dataService.deleteData(id).subscribe(res=>{
+    this.getUserData();
+  console.log(res) ;
+     
   })
+  this.getUserData();
  }
 }

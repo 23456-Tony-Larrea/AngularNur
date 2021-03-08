@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import { HttpClient } from '@angular/common/http'
 import { Users } from '../class/users';
 @Injectable({
   providedIn: 'root'
@@ -9,18 +9,23 @@ export class DataService {
     throw new Error('Method not implemented.');
   }
 
-  constructor(private httpClient:HttpClient) { }
-  getData(){
-    return this.httpClient.get('http://192.168.100.241:8000/api/usuario')
+  constructor(private httpClient: HttpClient) { }
+  getData() {
+    return this.httpClient.get('http://192.168.100.244:8000/api/usuario')
   }
-  insertData(data: Users){
-    return this.httpClient.post('http://192.168.100.241:8000/api/usersPost',data)
+  getUserById(id: string) {
+    return this.httpClient.get(`http://192.168.100.244:8000/api/usuario/${id}`)
+  } 
+  insertData(data: Users) {
+    return this.httpClient.post('http://192.168.100.244:8000/api/usersPost', data)
   }
-  deleteData(id: string){
-    return this.httpClient.delete('http://192.168.100.241:8000/api/usersDelete/'+id)
-  
+  deleteData(id: string) {
+    return this.httpClient.delete(`http://192.168.100.244:8000/api/usersDelete/${id}`)
+
   }
-  updateUsersData(id:string ,data:Users){
-    return this.httpClient.put(`http://192.168.100.241:8000/api/usersPath/${id}`,data);
+  updateUsersData(id: string, data: Users) {
+    return this.httpClient.patch(`http://192.168.100.244:8000/api/usersPath/${id}`, data);
   }
 }
+
+

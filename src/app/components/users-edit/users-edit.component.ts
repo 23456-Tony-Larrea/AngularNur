@@ -15,18 +15,18 @@ constructor(private route:ActivatedRoute ,private dataService:DataService) { }
 
   ngOnInit(): void {
    this.id=this.route.snapshot.params.id;
-   /* this.getData(); */
+   this.getData(); 
+   console.log(this.id);
   }
-  /* getData(){
+
+  getData(){
 this.dataService.getUserById(this.id).subscribe(res=>{
   this.data=res;
   this.userss=this.data;
 })
-  } */
+  } 
   
 updateUsers(){
- this.dataService.updateUsersData(this.id,this.userss).subscribe(res=>{
-
- }); 
+ this.dataService.updateUsersData(this.id,this.userss).subscribe(resp=>{console.log(resp)})
 }
 }
